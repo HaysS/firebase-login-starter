@@ -3,6 +3,27 @@ import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { AppLoading, Asset, Font, Icon } from 'expo';
 import AppNavigator from './navigation/AppNavigator';
 
+/* 
+==================================
+START OF TUTORIAL CODE 
+==================================  
+*/
+
+//Imports firebase so that you can call it's functions
+import * as firebase from 'firebase'
+
+//Imports the Firebase database credentials we need to initiliaze the connection
+const firebaseConfig = require('./config');
+
+//Initializes the connection with the Firebase Server so that you can access it's data from the internet
+firebase.initializeApp(firebaseConfig)
+
+/* 
+==================================
+END OF TUTORIAL CODE 
+==================================  
+*/
+
 export default class App extends React.Component {
   state = {
     isLoadingComplete: false,
